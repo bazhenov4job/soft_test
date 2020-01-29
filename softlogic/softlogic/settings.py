@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'create_person.apps.Create_personConfig',
+    'get_ids.apps.Get_idsConfig',
+    'get_object_info.apps.Get_object_infoConfig',
+    'add_vector.apps.Add_vectorConfig',
+    'compare_vectors.apps.Compare_vectorsConfig',
+    'delete_object.apps.Delete_objectConfig',
+    'test_app.apps.Test_appConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
