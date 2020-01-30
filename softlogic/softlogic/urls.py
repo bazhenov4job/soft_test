@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from get_ids.views import PesonsIdView
+from create_person.views import CreatePersonView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get_ids/', PesonsIdView.as_view())
-
+    path('get_ids/', PesonsIdView.as_view()),
+    path('create_person/', CreatePersonView.as_view()),
 ]

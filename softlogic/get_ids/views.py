@@ -10,4 +10,4 @@ class PesonsIdView(APIView):
     def get(self, request):
         persons = Person.objects.all()
         persons_ids = [x.id for x in persons]
-        return Response({"persons_ids": persons_ids})
+        return Response({"All objects ids": persons_ids})
