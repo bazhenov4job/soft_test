@@ -37,14 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'create_person.apps.Create_personConfig',
-    'get_ids.apps.Get_idsConfig',
-    'get_object_info.apps.Get_object_infoConfig',
-    'add_vector.apps.Add_vectorConfig',
-    'compare_vectors.apps.Compare_vectorsConfig',
-    'delete_object.apps.Delete_objectConfig',
-    'test_app.apps.Test_appConfig',
     'rest_framework',
+    'django_mysql',
+    'add_vector',
+    'compare_vectors',
+    'create_person',
+    'delete_object',
+    'get_ids',
+    'get_object_info',
 ]
 
 MIDDLEWARE = [
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'softlogic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'image_recognition',
+        'USER': 'bazhenov',
+        'PASSWORD': 'fMPmSnf&^6jmARrS',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -111,9 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -126,3 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_FILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

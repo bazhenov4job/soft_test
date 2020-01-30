@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from get_ids.views import PesonsIdView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('get_ids/', PesonsIdView.as_view())
+
 ]
