@@ -28,6 +28,6 @@ urlpatterns = [
     path('create_person/', CreatePersonView.as_view()),
     path('get_object_info/<int:pk>/', ReturnInfoView.as_view()),
     path('delete_object/<int:pk>/', DeleteObjectView.as_view()),
-    path('add_vector/', AddVectorView.as_view()),
+    path('add_vector/<int:pk>/', AddVectorView.as_view()),
 
 ]
