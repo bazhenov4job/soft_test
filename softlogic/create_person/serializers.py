@@ -5,7 +5,7 @@ from .models import Person
 class PersonSerializer(serializers.Serializer):
     first_name = serializers.CharField(max_length=64)
     second_name = serializers.CharField(max_length=128)
-    vector = serializers.JSONField()
+    vector = serializers.JSONField(required=False)
 
     def create(self, validated_data):
         return Person.objects.create(**validated_data)
