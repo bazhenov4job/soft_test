@@ -1,4 +1,4 @@
-#!D:\Programming\Softlogic\venv\Scripts\python.exe
+#!E:\SoftLogic\soft_test\venv\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
