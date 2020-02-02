@@ -20,6 +20,7 @@ from create_person.views import CreatePersonView
 from get_object_info.views import ReturnInfoView
 from delete_object.views import DeleteObjectView
 from add_vector.views import AddVectorView
+from compare_vectors.views import CompareVectorsView
 
 
 urlpatterns = [
@@ -29,5 +30,6 @@ urlpatterns = [
     path('get_object_info/<int:pk>/', ReturnInfoView.as_view()),
     path('delete_object/<int:pk>/', DeleteObjectView.as_view()),
     path('add_vector/<int:pk>/', AddVectorView.as_view()),
+    path('compare_vectors/', CompareVectorsView.as_view()),
 
 ]

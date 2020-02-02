@@ -14,7 +14,6 @@ from PIL import Image
 class AddVectorView(APIView):
     parser_classes = [MultiPartParser, ]
 
-
     def post(self, request, **kwargs):
         size = (300, 300)
         pk = kwargs.get('pk')
