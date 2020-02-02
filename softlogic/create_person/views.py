@@ -11,7 +11,6 @@ class CreatePersonView(APIView):
     def post(self, request):
 
         new_person = request.data.get('person')
-        print(new_person)
         serializer = PersonSerializer(data=new_person)
 
         if serializer.is_valid(raise_exception=True):
